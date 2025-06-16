@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft JhengHei', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+/* 名言區域 */
+.quote-section {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.timer-section {
+    margin-bottom: 25px;
+}
+
+.main-timer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-timer h2 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.time-display {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 15px;
+}
+
+/* 進度條樣式 */
+.progress-container {
+    margin: 10px 0;
+}
+
+.progress-container label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.alarm-progress {
+    background: linear-gradient(90deg, #ff6b6b, #ee5a24);
+}
+
+.long-break-progress {
+    background: linear-gradient(90deg, #4834d4, #686de0);
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.next-alarm {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.next-alarm h3 {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.alarm-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e74c3c;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 10px;
+}
+
+/* 音效設定區域 */
+.sound-section {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.sound-section h3 {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.sound-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sound-controls select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.test-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.test-btn:hover {
+    background: #2980b9;
+}
+
+.break-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.short-break, .long-break {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.break-section h3 {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.break-display {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #27ae60;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 10px;
+}
+
+.break-button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.break-button:hover:not(:disabled) {
+    background: #219a52;
+}
+
+.break-button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.control-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.start {
+    background: #27ae60;
+    color: white;
+}
+
+.start:hover {
+    background: #219a52;
+}
+
+.pause {
+    background: #f39c12;
+    color: white;
+}
+
+.pause:hover:not(:disabled) {
+    background: #e67e22;
+}
+
+.reset {
+    background: #e74c3c;
+    color: white;
+}
+
+.reset:hover {
+    background: #c0392b;
+}
+
+.control-btn:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.status {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 10px;
+    background: #ecf0f1;
+    border-radius: 10px;
+}
+
+.alarm-active {
+    background: #e74c3c !important;
+    color: white !important;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .sound-controls {
+        flex-direction: column;
+    }
+
+    .break-section {
+        grid-template-columns: 1fr;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .time-display {
+        font-size: 2rem;
+    }
+}
